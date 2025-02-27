@@ -1,10 +1,10 @@
 import UserCard from "./UserCard";
-import { users } from "../userProfile/userProfile1";
+import { users } from "../userProfile/userProfile2";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthenContext";
 import { useState, useEffect } from "react";
 
-export default function UserProfile1() {
+export default function UserProfile2() {
   const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useState(() => {
@@ -58,7 +58,7 @@ export default function UserProfile1() {
         </button>
       </nav>
       <h1 className="text-4xl text-center  p-6 uppercase font-semibold">
-        MEDIA MARKETING team
+        MARKETING ANALYST TEAM{" "}
       </h1>
       <div className="flex flex-wrap justify-center gap-6">
         {users.map((user) => (

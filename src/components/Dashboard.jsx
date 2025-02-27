@@ -113,7 +113,7 @@ export default function Dashboard() {
 
         <div
           className="p-6 rounded-lg shadow-lg bg-white text-black transform transition duration-300 hover:scale-105 cursor-pointer"
-          // onClick={() => navigate("/userprofile1")}
+          onClick={() => navigate("/userprofile1")}
         >
           <img
             src="https://cdn.bitrix24.in/b32626871/resize_cache/55/a7fa78f57e73ecbd0b9500a062d0d214/main/f37/f37dd56bf8b1c483a0bccd2aa88c5f28/IMG_20250113_163645%20_1_.jpg.png"
@@ -125,13 +125,25 @@ export default function Dashboard() {
         </div>
         <div
           className="p-6 rounded-lg shadow-lg bg-white text-black transform transition duration-300 hover:scale-105 cursor-pointer"
-          // onClick={() => navigate("/userprofile1")}
+          onClick={() => navigate("/userprofile2")}
         >
           <img
             src="https://cdn.bitrix24.in/b32626871/resize_cache/253/a7fa78f57e73ecbd0b9500a062d0d214/main/8aa/8aad689447ae8a6d16112b0187e887c1/avatar.png"
             className="w-4/5 m-auto h-40 bg-gray-300 rounded-xl object-cover"
           />
           <h3 className="text-xl font-semibold mt-4">📢 Marketing Team</h3>
+          <p className="mt-2">Explore the team and their amazing work.</p>
+        </div>
+        <div
+          className="p-6 rounded-lg shadow-lg bg-white text-black transform transition duration-300 hover:scale-105 cursor-pointer"
+          onClick={() => navigate("/userprofile3")}
+        >
+          <img
+            src="https://cdn.bitrix24.in/b32626871/resize_cache/101/a7fa78f57e73ecbd0b9500a062d0d214/main/a95/a95e4f56f913803e0d412088be19f9d9/avatar.png"
+            alt="Full Stack Team"
+            className="w-4/5 m-auto h-40 bg-gray-300 rounded-xl object-cover"
+          />
+          <h3 className="text-xl font-semibold mt-4">🔌 Embedded Team</h3>
           <p className="mt-2">Explore the team and their amazing work.</p>
         </div>
         <div
@@ -143,19 +155,7 @@ export default function Dashboard() {
             alt="Full Stack Team"
             className="w-4/5 m-auto h-40 bg-gray-300 rounded-xl object-cover"
           />
-          <h3 className="text-xl font-semibold mt-4">🎨 Graphic Designer</h3>
-          <p className="mt-2">Explore the team and their amazing work.</p>
-        </div>
-        <div
-          className="p-6 rounded-lg shadow-lg bg-white text-black transform transition duration-300 hover:scale-105 cursor-pointer"
-          // onClick={() => navigate("/userprofile1")}
-        >
-          <img
-            src="https://cdn.bitrix24.in/b32626871/resize_cache/101/a7fa78f57e73ecbd0b9500a062d0d214/main/a95/a95e4f56f913803e0d412088be19f9d9/avatar.png"
-            alt="Full Stack Team"
-            className="w-4/5 m-auto h-40 bg-gray-300 rounded-xl object-cover"
-          />
-          <h3 className="text-xl font-semibold mt-4">🔌 Embedded Team</h3>
+          <h3 className="text-xl font-semibold mt-4">🎨 Designer Team</h3>
           <p className="mt-2">Explore the team and their amazing work.</p>
         </div>
       </div>
