@@ -48,13 +48,13 @@ const UserProfile = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-gray-900 " : "bg-gray-100 text-black"
-      } min-h-screen `}
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+      } min-h-screen`}
     >
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-4 bg-gray-800 text-gray-300 uppercase px-6 max-sm:text-sm max-sm:items-center ">
+      <nav className="flex justify-between items-center p-4 bg-gray-800 text-gray-300 uppercase px-6">
         <h1 className="text-xl font-bold">Nexgen Nextopia</h1>
-        <div className="flex space-x-4 max-sm:flex-col max-sm:space-y-2 max-sm:space-x-0">
+        <div className="flex space-x-4">
           <Link to="/dashboard" className="hover:underline">
             Dashboard
           </Link>
@@ -66,19 +66,21 @@ const UserProfile = () => {
           </Link>
           <button
             onClick={handleLogout}
-            className="bg-red-600 px-4 py-1 rounded-lg hover:bg-red-600 font-semibold text-white max-sm:px-16"
+            className="bg-red-600 px-4 py-1 rounded-lg hover:bg-red-500 font-semibold text-white"
           >
             Logout
           </button>
         </div>
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="p-2 bg-gray-600 rounded-full focus:outline-none mt-2 max-sm:mt-4"
+          className="p-2 bg-gray-600 rounded-full focus:outline-none"
+          aria-label="Toggle Dark Mode"
         >
           {darkMode ? "☀️" : "🌙"}
         </button>
       </nav>
 
+      {/* Search Box */}
       <div className="flex justify-center mt-10">
         <div className="bg-white p-6 rounded-2xl shadow-lg w-full max-w-md">
           <h1 className="text-xl font-bold text-gray-800 mb-4 text-center">
@@ -102,11 +104,11 @@ const UserProfile = () => {
 
       {/* Display Loading State */}
       {loading && (
-        <div className="text-center  text-gray-500 mt-6">Loading users...</div>
+        <div className="text-center text-gray-500 mt-6">Loading users...</div>
       )}
 
       {/* Display User Cards */}
-      <div className="mt-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
         {users.map((user) => (
           <div
             key={user.id}
@@ -122,7 +124,10 @@ const UserProfile = () => {
             </h2>
             <p className="text-gray-600 dark:text-gray-400">{user.role}</p>
             <p className="text-gray-600 dark:text-gray-400">{user.location}</p>
-            <button className="mt-2 bg-green-600 text-white px-3 py-1 rounded-lg hover:bg-green-500">
+            <button
+              className="mt-2 bg-green-600 text-white px-3 py-1 rounded-lg hover:bg-green-500"
+              onClick={() => alert("✔ Added to the Team")}
+            >
               Add Employee
             </button>
           </div>
