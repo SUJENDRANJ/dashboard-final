@@ -48,7 +48,7 @@ const UserProfile = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+        darkMode ? "bg-gray-900 " : "bg-gray-100 text-black"
       } min-h-screen`}
     >
       {/* Navbar */}
